@@ -17,6 +17,8 @@ use app\src\pbx\router\Router;
 class GatherRouter extends BaseRouter
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint

@@ -9,6 +9,8 @@ namespace app\src\models;
 class LocalPresents extends \app\models\LocalPresents
 {
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

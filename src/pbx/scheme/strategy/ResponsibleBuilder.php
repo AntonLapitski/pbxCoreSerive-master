@@ -12,6 +12,8 @@ use app\src\pbx\scheme\model\Data;
 class ResponsibleBuilder extends DirectBuilder
 {
     /**
+     * засетить дата и сохранить
+     *
      * @return Data
      */
     public function build(): Data

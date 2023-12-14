@@ -3,6 +3,9 @@
 namespace app\src\models;
 
 /**
+ * Class Company
+ * Модель компании
+ *
  * @property Log[] $logs
  * @property Twilio $twilio
  * @property User[] $users
@@ -11,6 +14,8 @@ namespace app\src\models;
 class Company extends \app\models\Company
 {
     /**
+     * получить поток
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCallFlow(): \yii\db\ActiveQuery
@@ -19,6 +24,8 @@ class Company extends \app\models\Company
     }
 
     /**
+     * получить логи звонков
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCallLogs(): \yii\db\ActiveQuery
@@ -27,6 +34,8 @@ class Company extends \app\models\Company
     }
 
     /**
+     * получить твилио объект
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getTwilio(): \yii\db\ActiveQuery
@@ -35,6 +44,8 @@ class Company extends \app\models\Company
     }
 
     /**
+     * получить юзеров
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getUsers(): \yii\db\ActiveQuery
@@ -43,6 +54,8 @@ class Company extends \app\models\Company
     }
 
     /**
+     * получить юзера
+     *
      * @param $condition
      * @return array
      */

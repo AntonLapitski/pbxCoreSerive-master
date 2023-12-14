@@ -7,11 +7,22 @@ use libphonenumber\PhoneNumberFormat;
 use libphonenumber\PhoneNumberUtil;
 
 /**
- * Class TwilioRequest
+ * Class TwilioRequestт с твилио сервисом
+ * Запрос класс который взаимодействием
+ *
+ * @property string $AccountSid
+ * @property string $Direction
+ * @property string|array $From
+ * @property string $To
  * @package app\src\event\request\strategy
  */
 abstract class TwilioRequest extends Request implements RequestInterface
 {
+    /**
+     * айди аккаунта
+     *
+     * @var string
+     */
     public string $AccountSid;
     public string $Direction;
     public string|array $From;
@@ -28,11 +39,15 @@ abstract class TwilioRequest extends Request implements RequestInterface
     }
 
     /**
+     * установить направление звонка
+     *
      * @return string
      */
     abstract protected function setDirection(): string;
 
     /**
+     * поулчить направление зваонка
+     *
      * @return string
      */
     public function getDirection(): string
@@ -41,6 +56,8 @@ abstract class TwilioRequest extends Request implements RequestInterface
     }
 
     /**
+     * установить кому и от кого направляется вызов
+     *
      * @param $countryCode
      */
     public function setData($countryCode): void
@@ -50,6 +67,8 @@ abstract class TwilioRequest extends Request implements RequestInterface
     }
 
     /**
+     * отпарсить телефон
+     *
      * @param $phone
      * @param $region
      * @return string
@@ -73,6 +92,8 @@ abstract class TwilioRequest extends Request implements RequestInterface
     }
 
     /**
+     * исходящий телефон
+     *
      * @param $phone
      * @return string|null
      */

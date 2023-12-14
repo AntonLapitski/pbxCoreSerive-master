@@ -16,6 +16,8 @@ use app\src\instance\config\src\integration\Integration;
 class CallbackInstance extends Instance
 {
     /**
+     * получить конфиг
+     *
      * @param \app\src\models\Config|null $model
      * @return ConfigInterface
      * @throws config\ConfigException
@@ -40,6 +42,8 @@ class CallbackInstance extends Instance
     }
 
     /**
+     * получить ответственоого пользователя
+     *
      * @param null $target
      * @return User|null
      */
@@ -60,7 +64,9 @@ class CallbackInstance extends Instance
 
 
     /**
+     * засетить интеграционные данные
      *
+     * @return void
      */
     protected function setIntegrationData(): void
     {

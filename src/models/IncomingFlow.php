@@ -9,6 +9,8 @@ namespace app\src\models;
 class IncomingFlow extends \app\models\IncomingFlow
 {
     /**
+     * поулчить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

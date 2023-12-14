@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Voicemail
+ * Голосовая почта
+ *
  * @package app\modules\api\models
  */
 class Voicemail extends \app\models\Voicemail implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Voicemail extends \app\models\Voicemail implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

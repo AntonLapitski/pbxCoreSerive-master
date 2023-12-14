@@ -16,7 +16,9 @@ use app\src\pbx\checkpoint\strategy\MessageCheckpoint;
 class MessageInstance extends Instance
 {
     /**
+     * установить интеграционные данные
      *
+     * @return void
      */
     protected function setIntegrationData(): void
     {
@@ -25,6 +27,8 @@ class MessageInstance extends Instance
     }
 
     /**
+     * получить конфиг
+     *
      * @param Config|null $model
      * @return ConfigInterface
      * @throws config\ConfigException

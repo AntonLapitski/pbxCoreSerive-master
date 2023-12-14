@@ -6,13 +6,24 @@ use app\src\instance\Instance;
 
 /**
  * Class Log
- * @package app\src\instance\log
  * @property \app\src\models\Log $element
  * @property Instance $instance
+ * @package app\src\instance\log
  */
 class Log
 {
+    /**
+     * модель
+     *
+     * @var \app\src\models\Log $model
+     */
     public \app\src\models\Log $model;
+
+    /**
+     * образ
+     *
+     * @var Instance $instance
+     */
     protected Instance $instance;
 
     /**
@@ -28,6 +39,8 @@ class Log
     }
 
     /**
+     * установить модель
+     *
      * @param null $eventSid
      * @return \app\src\models\Log
      */
@@ -62,6 +75,8 @@ class Log
     }
 
     /**
+     * получить модель
+     *
      * @param $eventSid
      * @return \app\src\models\Log
      */
@@ -89,6 +104,8 @@ class Log
     }
 
     /**
+     * забрать статус
+     *
      * @param $event_type
      * @return string
      */
@@ -103,6 +120,8 @@ class Log
     }
 
     /**
+     * получить записанный урл
+     *
      * @param \app\src\models\Log $model
      * @return string|null
      */
@@ -112,7 +131,10 @@ class Log
     }
 
     /**
+     * уствновить интеграционные данные
+     *
      * @param $data
+     * @return void
      */
     public function setIntegrationData($data)
     {
@@ -120,6 +142,8 @@ class Log
     }
 
     /**
+     * обновить с параметрами
+     *
      * @param $eventSid
      * @param $params
      * @return bool
@@ -131,6 +155,8 @@ class Log
     }
 
     /**
+     * вернуть модель
+     *
      * @param null $eventSid
      * @return $this
      */
@@ -141,6 +167,8 @@ class Log
     }
 
     /**
+     * сохранить модель
+     *
      * @param array $params
      * @return bool
      */
@@ -157,6 +185,8 @@ class Log
     }
 
     /**
+     * установить
+     *
      * @param array $params
      * @return bool
      */
@@ -167,6 +197,8 @@ class Log
     }
 
     /**
+     * поулчить записанный урл
+     *
      * @param $sid
      * @return bool
      */

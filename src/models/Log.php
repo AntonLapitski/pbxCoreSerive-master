@@ -4,14 +4,22 @@ namespace app\src\models;
 
 /**
  * Class Log
+ * @property array $checkpointList
  * @package app\src\models
  */
 class Log extends \app\models\Log
 {
+    /**
+     * проверочный лист
+     *
+     * @var array
+     * */
     private array $checkpointList = [];
 
     /**
+     * сохраняем новый проверочный лист
      *
+     * @return void
      */
     public function afterFind()
     {
@@ -21,6 +29,8 @@ class Log extends \app\models\Log
     }
 
     /**
+     * перед сохранением
+     *
      * @param $insert
      * @return bool
      */
@@ -35,6 +45,8 @@ class Log extends \app\models\Log
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

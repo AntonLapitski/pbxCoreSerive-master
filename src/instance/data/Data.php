@@ -13,14 +13,34 @@ use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * class Data.
+ * класс дата
+ *
  * @property array $data
  * @property Instance $instance
+ * @property array $integrationData
+ * @package app\src\instance\data
  */
 class Data
 {
+    /**
+     * данные
+     *
+     * @var array
+     */
     public array $data;
+
+    /**
+     * образ
+     *
+     * @var Instance
+     */
     protected Instance $instance;
 
+    /**
+     *
+     *
+     * @var array
+     */
     protected array $integrationData;
 
     /**
@@ -34,6 +54,8 @@ class Data
     }
 
     /**
+     * засетить данные интеграции
+     *
      * @return array
      */
     public function integrationRequest(): array
@@ -46,6 +68,8 @@ class Data
     }
 
     /**
+     * забрать данные с юзером
+     *
      * @return array
      */
     public function getData(): array
@@ -57,6 +81,8 @@ class Data
     }
 
     /**
+     * установить большой массив данных
+     *
      * @return array
      */
     protected function setData(): array
@@ -95,6 +121,8 @@ class Data
     }
 
     /**
+     * установить юзера
+     *
      * @return array|null
      */
     protected function setUser(): ?array
@@ -112,6 +140,8 @@ class Data
     }
 
     /**
+     * вернуть массив данных с настройка юзера
+     *
      * @param User $user
      * @return array
      */
@@ -128,6 +158,8 @@ class Data
     }
 
     /**
+     * данные звонка
+     *
      * @param Log $log
      * @return array
      */
@@ -144,6 +176,8 @@ class Data
     }
 
     /**
+     * интеграция данных
+     *
      * @param $integrationData
      */
     public function setIntegrationData($integrationData): void
@@ -152,6 +186,8 @@ class Data
     }
 
     /**
+     * получить направление
+     *
      * @return string|null
      */
     protected function getDirection(): ?string
@@ -169,6 +205,8 @@ class Data
     }
 
     /**
+     * засетить событие
+     *
      * @return array
      */
     private function setEvent(): array
@@ -186,6 +224,8 @@ class Data
     }
 
     /**
+     * установить телефон
+     *
      * @return mixed
      */
     private function setPhone()
@@ -202,6 +242,8 @@ class Data
     }
 
     /**
+     * установить медиа данные соообщения
+     *
      * @param RequestInterface $request
      * @return array
      */

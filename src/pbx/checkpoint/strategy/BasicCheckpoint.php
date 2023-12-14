@@ -8,13 +8,40 @@ use app\src\models\Model;
 
 /**
  * Class BasicCheckpoint
+ * @property string $type
+ * @property string $branch
+ * @property mixed $step
+ * @property string $timetable_status
  * @package app\src\pbx\checkpoint\strategy
  */
 abstract class BasicCheckpoint extends Model
 {
+    /**
+     * тип
+     *
+     * @var string
+     */
     public string $type;
+
+    /**
+     * ветка
+     *
+     * @var string
+     */
     public string $branch;
+
+    /**
+     * шаг
+     *
+     * @var mixed
+     */
     public mixed $step;
+
+    /**
+     * статус расписание
+     *
+     * @var string
+     */
     public string $timetable_status;
 
     /**
@@ -29,6 +56,8 @@ abstract class BasicCheckpoint extends Model
     }
 
     /**
+     * установить статус
+     *
      * @param $status
      */
     private function setTTStatus($status): void

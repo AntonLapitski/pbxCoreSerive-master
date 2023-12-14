@@ -10,10 +10,16 @@ use app\src\pbx\router\PbxRouterInterface;
 
 /**
  * Class BaseRouter
+ * @property Pbx $pbx
  * @package app\src\pbx\router\strategy
  */
 abstract class BaseRouter implements PbxRouterInterface
 {
+    /**
+     *
+     *
+     * @var Pbx
+     */
     protected Pbx $pbx;
 
     /**
@@ -26,6 +32,8 @@ abstract class BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * засетить проверочный шаг
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint
@@ -40,6 +48,8 @@ abstract class BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * зависает ли
+     *
      * @return bool
      */
     private function isHangup(): bool

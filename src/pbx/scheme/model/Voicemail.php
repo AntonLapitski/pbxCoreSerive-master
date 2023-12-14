@@ -7,10 +7,16 @@ use app\src\models\Model;
 
 /**
  * Class Voicemail
+ * @property array $flow
  * @package app\src\pbx\scheme\model
  */
 class Voicemail extends Model
 {
+    /**
+     * поток
+     *
+     * @var array
+     */
     public array $flow;
 
     /**

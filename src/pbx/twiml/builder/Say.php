@@ -11,16 +11,14 @@ use app\src\pbx\twiml\Twiml;
  */
 class Say extends TwimlMapper
 {
-    /**
-     *
-     */
+
     const VERB = 'say';
-    /**
-     *
-     */
+
     const MESSAGE = 'message';
 
     /**
+     * засетить слово
+     *
      * @return \Twilio\TwiML\VoiceResponse
      */
     public function build(): \Twilio\TwiML\VoiceResponse

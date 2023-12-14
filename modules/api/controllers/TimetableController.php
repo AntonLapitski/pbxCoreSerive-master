@@ -6,16 +6,23 @@ use app\modules\api\models\TimetableSearch;
 
 /**
  * Class TimetableController
+ * Контроллер, управляющий расписанием
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class TimetableController extends BaseController
 {
     /**
+     * название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\Timetable';
 
     /**
+     * возможные действия
+     *
      * @return array
      */
     public function actions(): array
@@ -26,6 +33,8 @@ class TimetableController extends BaseController
     }
 
     /**
+     * сделает поиск по модели
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

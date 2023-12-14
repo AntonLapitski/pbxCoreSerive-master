@@ -7,29 +7,150 @@ use app\src\event\Event;
 
 /**
  * Class CallRequest
+ * Вызов запроса
+ *
+ * @property string $CallerName
+ * @property string $CallSid
+ * @property string $CallStatus
+ * @property string $DialBridged
+ * @property string $DialCallSid
+ * @property string $DialCallStatus
+ * @property string $Digits
+ * @property string $msg
+ * @property string $RecordingDuration
+ * @property string $RecordingSid
+ * @property string $RecordingUrl
+ * @property string $ParentCallSid
+ * @property string $ReferTransferTarget
+ * @property string $Result
+ * @property string $SipCallId
+ * @property string $CallDuration
+ * @property string $Duration
  * @package app\src\event\request\strategy
  */
 class CallRequest extends TwilioRequest implements RequestInterface
 {
     //all
+    /**
+     * имя звонящего
+     *
+     * @var string
+     */
     public string $CallerName;
+
+    /**
+     * айди колла
+     *
+     * @var string
+     */
     public string $CallSid;
+
+    /**
+     * статус звонка
+     *
+     * @var string
+     */
     public string $CallStatus;
+
     //route
+    /**
+     * набор связи
+     *
+     * @var string
+     */
     public string $DialBridged;
+
+    /**
+     * айди набранного звонка
+     *
+     * @var string
+     */
     public string $DialCallSid;
+
+    /**
+     * статус набранного звонка
+     *
+     * @var string
+     */
     public string $DialCallStatus;
+
+    /**
+     * цифры
+     *
+     * @var string
+     */
     public string $Digits;
+
+    /**
+     * сообщение
+     *
+     * @var string
+     */
     public string $msg;
+
+    /**
+     * запись продолжительность
+     *
+     * @var string
+     */
     public string $RecordingDuration;
+
+    /**
+     * айди записи
+     *
+     * @var string
+     */
     public string $RecordingSid;
+
+    /**
+     * урл записи
+     *
+     * @var string
+     */
     public string $RecordingUrl;
+
+
+    /**
+     * родительский айди звонка
+     *
+     * @var string
+     */
     public string $ParentCallSid;
+
+    /**
+     * ссылка трансфертного задания
+     *
+     * @var string
+     */
     public string $ReferTransferTarget;
+
+    /**
+     * результат
+     *
+     * @var string
+     */
     public string $Result;
+
+    /**
+     * айпи айди звонка
+     *
+     * @var string
+     */
     public string $SipCallId;
+
     //status
+    /**
+     * прожолжительность звонка
+     *
+     * @var string
+     */
     public string $CallDuration;
+
+    /**
+     * продолжительность
+     *
+     * @var string
+     */
     public string $Duration;
 
     /**
@@ -57,6 +178,8 @@ class CallRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
+     * установить цифры
+     *
      * @return string
      */
     private function setDigits(): string
@@ -67,7 +190,10 @@ class CallRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
-     * @return |null
+     * установить сссылочный обен заданием
+     *
+     *
+     * @return array|null
      */
     private function setReferTransferTarget()
     {
@@ -78,6 +204,8 @@ class CallRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
+     * отпарсить урл
+     *
      * @param $url
      * @return string|null
      */
@@ -91,6 +219,8 @@ class CallRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
+     * установить данные набора звонка
+     *
      * @param array $data
      */
     public function setDialCallData(array $data): void
@@ -101,6 +231,8 @@ class CallRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
+     * установить напрвление звонка
+     *
      * @return string
      */
     protected function setDirection(): string

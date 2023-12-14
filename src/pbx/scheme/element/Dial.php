@@ -5,36 +5,47 @@ namespace app\src\pbx\scheme\element;
 
 /**
  * Class Dial
+ * @property string $noun
+ * @property array $list
+ * @property array $options
  * @package app\src\pbx\scheme\element
  */
 class Dial extends BasicElement
 {
-    /**
-     *
-     */
     const NOUN_SIP = 'sip';
-    /**
-     *
-     */
+
     const NOUN_NUMBER = 'number';
-    /**
-     *
-     */
+
     const NOUN_CLIENT = 'client';
-    /**
-     *
-     */
+
     const TARGET = 'target';
-    /**
-     *
-     */
+
     const OPTIONS = 'options';
 
+    /**
+     * существительное
+     *
+     * @var string
+     */
     public string $noun;
+
+    /**
+     * список
+     *
+     * @var array
+     */
     public array $list;
+
+    /**
+     * опции
+     *
+     * @var array
+     */
     public array $options;
 
     /**
+     * выстроить список и опции
+     *
      * @return array
      */
     public function build(): array
@@ -45,7 +56,9 @@ class Dial extends BasicElement
     }
 
     /**
+     * засетить список
      *
+     * @return void
      */
     private function list(): void
     {
@@ -68,6 +81,8 @@ class Dial extends BasicElement
     }
 
     /**
+     * установить массив нужными данными
+     *
      * @param string $target
      * @return array
      */
@@ -84,7 +99,9 @@ class Dial extends BasicElement
     }
 
     /**
+     * засетить опции
      *
+     * @return void
      */
     protected function options(): void
     {

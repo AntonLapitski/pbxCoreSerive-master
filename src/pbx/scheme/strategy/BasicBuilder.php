@@ -9,11 +9,24 @@ use app\src\pbx\twiml\Twiml;
 
 /**
  * Class BasicBuilder
+ * @property Pbx $pbx
+ * @property array $data
  * @package app\src\pbx\scheme\strategy
  */
 abstract class BasicBuilder
 {
+    /**
+     * объект свойство
+     *
+     * @var Pbx
+     */
     protected Pbx $pbx;
+
+    /**
+     * данные
+     *
+     * @var array
+     */
     protected array $data;
 
     /**
@@ -26,6 +39,8 @@ abstract class BasicBuilder
     }
 
     /**
+     * объект данные
+     *
      * @return Data
      */
     public function build(): Data
@@ -34,6 +49,8 @@ abstract class BasicBuilder
     }
 
     /**
+     * создаем необходимый класс через путь
+     *
      * @param $element
      * @return array
      */

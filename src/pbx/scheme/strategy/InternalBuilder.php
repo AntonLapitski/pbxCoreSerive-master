@@ -13,6 +13,8 @@ use app\src\pbx\scheme\model\Data;
 class InternalBuilder extends DirectBuilder
 {
     /**
+     * засетить дату и сохранить
+     *
      * @return Data
      */
     public function build(): Data

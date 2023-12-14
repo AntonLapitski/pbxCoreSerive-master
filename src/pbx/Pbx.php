@@ -12,13 +12,40 @@ use app\src\pbx\twiml\Twiml;
 
 /**
  * Class Pbx
+ * @property InstanceInterface $instance
+ * @property Checkpoint $checkpoint
+ * @property Scheme $scheme
+ * @property string $service
  * @package app\src\pbx
  */
 class Pbx
 {
+    /**
+     * образ
+     *
+     * @var InstanceInterface
+     */
     public InstanceInterface $instance;
+
+    /**
+     * проверочный пункт
+     *
+     * @var Checkpoint
+     */
     public Checkpoint $checkpoint;
+
+    /**
+     * схема
+     *
+     * @var Scheme
+     */
     public Scheme $scheme;
+
+    /**
+     * сервис
+     *
+     * @var string
+     */
     public string $service;
 
     /**
@@ -34,6 +61,8 @@ class Pbx
     }
 
     /**
+     * создать и возвратить объект
+     *
      * @return PbxData
      */
     public function data(): PbxData

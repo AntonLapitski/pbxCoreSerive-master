@@ -3,6 +3,7 @@
 namespace app\models;
 
 /**
+ * Сlass Log
  * This is the element class for table "log".
  *
  * @property int $id
@@ -18,13 +19,15 @@ namespace app\models;
  * @property string $result
  * @property array $checkpoint
  * @property array $integration_data
- *
  * @property Company $company
+ * @package app\models
  */
 class Log extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -32,7 +35,9 @@ class Log extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * правила валидации
+     *
+     * @return array
      */
     public function rules()
     {
@@ -46,6 +51,8 @@ class Log extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

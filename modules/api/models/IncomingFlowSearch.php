@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class IncomingFlowSearch
+ * Модель, ищущая по потоку
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class IncomingFlowSearch extends IncomingFlow
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class IncomingFlowSearch extends IncomingFlow
     }
 
     /**
+     * поиск по входящему потоку
+     *
      * @param $params
      * @return ActiveDataProvider
      */

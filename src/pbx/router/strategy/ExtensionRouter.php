@@ -14,6 +14,8 @@ use app\src\pbx\checkpoint\strategy\OutgoingCheckpoint;
 class ExtensionRouter extends BaseRouter
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint

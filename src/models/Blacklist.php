@@ -9,6 +9,8 @@ namespace app\src\models;
 class Blacklist extends \app\models\Blacklist
 {
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

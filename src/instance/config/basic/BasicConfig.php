@@ -13,14 +13,41 @@ use app\src\instance\config\src\timetable\Timetable;
 
 /**
  * Class BasicConfig
- * @package app\src\instance\config
+ * @property Config $model
  * @property Integration $integration
+ * @property StudioNumber $studioNumber
+ * @property ConfigSettings $settings
+ * @package app\src\instance\config\basic
  */
 abstract class BasicConfig implements ConfigInterface
 {
+
+    /**
+     * конфг модель
+     *
+     * @var Config
+     */
     public Config $model;
+
+    /**
+     * интеграция
+     *
+     * @var Integration
+     */
     public Integration $integration;
+
+    /**
+     * студийный номер
+     *
+     * @var StudioNumber
+     */
     public StudioNumber $studioNumber;
+
+    /**
+     * сетинги конфигурации
+     *
+     * @var ConfigSettings
+     */
     protected ConfigSettings $settings;
 
     /**
@@ -36,7 +63,9 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * заполнение данными
      *
+     * @return void
      */
     protected function fill(): void
     {
@@ -47,6 +76,8 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * установить сво-во
+     *
      * @param $fieldName
      * @param $sid
      */
@@ -62,6 +93,8 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * забрать конфиг объект
+     *
      * @param string|null $number
      * @return ConfigInterface
      */
@@ -72,12 +105,16 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * студийный номер
+     *
      * @param array $config
      * @return mixed
      */
     abstract protected function studioNumber(array $config = []);
 
     /**
+     * вернуть массив пустой
+     *
      * @param null $status
      * @return array
      */
@@ -94,6 +131,8 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * вернуть черновой список
+     *
      * @param $sid
      * @return Blacklist
      */
@@ -103,6 +142,8 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * получить объект сформированной интеграции
+     *
      * @param $sid
      * @return Integration
      */
@@ -115,6 +156,8 @@ abstract class BasicConfig implements ConfigInterface
     }
 
     /**
+     * забрать расписание
+     *
      * @param $sid
      * @return Timetable
      */

@@ -11,12 +11,32 @@ use crmpbx\logger\Logger;
 
 /**
  * Class Pbx
+ * @property TwilioClient $twilioClient
+ * @property Logger $logger
+ * @property \Closure $callback
  * @package app\src
  */
 class Pbx
 {
+    /**
+     * твилио клиент
+     *
+     * @var TwilioClient
+     */
     public TwilioClient $twilioClient;
+
+    /**
+     * логгер
+     *
+     * @var Logger
+     */
     public Logger $logger;
+
+    /**
+     * коллбэк
+     *
+     * @var \Closure
+     */
     private \Closure $callback;
 
     /**
@@ -51,6 +71,8 @@ class Pbx
     }
 
     /**
+     * вернуть класс
+     *
      * @param $request
      * @param $event
      * @param $step
@@ -63,6 +85,8 @@ class Pbx
     }
 
     /**
+     * вернуть класс
+     *
      * @param EventInterface $event
      * @param Client $client
      * @return InstanceInterface
@@ -74,6 +98,8 @@ class Pbx
     }
 
     /**
+     * вернуть класс
+     *
      * @param array $config
      * @return pbx\Pbx
      */

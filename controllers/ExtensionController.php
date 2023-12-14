@@ -9,11 +9,15 @@ use crmpbx\commutator\CommutatorException;
 
 /**
  * Class ExtensionController
+ * Контроллер, управляющий расширениями
+ *
  * @package app\controllers
  */
 class ExtensionController extends AppController
 {
     /**
+     * поулчить сво-во twiml
+     *
      * @return mixed
      */
     public function actionInit()
@@ -30,7 +34,9 @@ class ExtensionController extends AppController
     }
 
     /**
+     * вывести в лог
      *
+     * @return void
      */
     public function actionRoute()
     {
@@ -50,6 +56,9 @@ class ExtensionController extends AppController
 
     /**
      *
+     * Вывести статус
+     *
+     * @return void
      */
     public function actionStatus()
     {
@@ -62,6 +71,9 @@ class ExtensionController extends AppController
 
     /**
      *
+     * Статус набраннных звонков
+     *
+     * @return void
      */
     public function actionDialStatus()
     {

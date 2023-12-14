@@ -12,16 +12,14 @@ use app\src\pbx\twiml\Twiml;
  */
 class Play extends TwimlMapper
 {
-    /**
-     *
-     */
+
     const VERB = 'play';
-    /**
-     *
-     */
+
     const URL = 'url';
 
     /**
+     * засетить проигрывание
+     *
      * @return \Twilio\TwiML\VoiceResponse
      */
     public function build(): \Twilio\TwiML\VoiceResponse

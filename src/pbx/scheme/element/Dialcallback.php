@@ -9,6 +9,8 @@ namespace app\src\pbx\scheme\element;
 class Dialcallback extends Dial
 {
     /**
+     * установить глагол
+     *
      * @return array
      */
     public function build(): array
@@ -18,7 +20,9 @@ class Dialcallback extends Dial
     }
 
     /**
+     * настроить опции
      *
+     * @return void
      */
     protected function options(): void
     {
@@ -32,6 +36,8 @@ class Dialcallback extends Dial
     }
 
     /**
+     * получить массив
+     *
      * @param string $target
      * @return array
      */

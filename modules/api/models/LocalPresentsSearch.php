@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class LocalPresentsSearch
+ * Модель, поиска по лакальным представлениям
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class LocalPresentsSearch extends LocalPresents
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class LocalPresentsSearch extends LocalPresents
     }
 
     /**
+     * Поиск полокальным представлениям
+     *
      * @param $params
      * @return ActiveDataProvider
      */

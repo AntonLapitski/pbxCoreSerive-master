@@ -20,6 +20,8 @@ class Model extends \yii\base\Model
     }
 
     /**
+     * получить конфиг
+     *
      * @param $data
      * @return array
      */
@@ -34,6 +36,8 @@ class Model extends \yii\base\Model
     }
 
     /**
+     * преваратить в массив через поля
+     *
      * @return array
      */
     public function asArray(): array

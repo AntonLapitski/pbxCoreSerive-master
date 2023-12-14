@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class ConfigSearch
+ * Модель, поиска по конфигу
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class ConfigSearch extends Config
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class ConfigSearch extends Config
     }
 
     /**
+     * поиск по конфигу
+     *
      * @param $params
      * @return ActiveDataProvider
      */

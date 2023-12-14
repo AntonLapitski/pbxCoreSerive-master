@@ -11,22 +11,18 @@ use app\src\event\request\strategy\RequestInterface;
  */
 class Request
 {
-    /**
-     *
-     */
     const DIGITS_HANGUP = 'hangup';
-    /**
-     *
-     */
+
     const DIGITS_TIMEOUT = 'timeout';
-    /**
-     *
-     */
+
     const DIGITS_GATHER_END = 'gather end';
 
 
     /**
+     * возвращает класс засеченый запросом
+     *
      * @throws ContentNotFound
+     * @return object
      */
     public static function get(array $request, $event): RequestInterface
     {

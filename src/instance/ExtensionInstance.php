@@ -2,6 +2,7 @@
 
 namespace app\src\instance;
 
+use app\src\instance\config\Config;
 use app\src\models\User;
 use app\src\event\Event;
 use app\src\instance\config\ConfigInterface;
@@ -14,6 +15,10 @@ use app\src\instance\config\src\integration\Integration;
 class ExtensionInstance extends Instance
 {
     /**
+     * вернуть конфиг
+     *
+     * @param \app\src\models\Config|null $model
+     * @return ConfigInterface
      * @throws config\ConfigException
      */
     protected function getConfig(\app\src\models\Config $model = null): ConfigInterface
@@ -25,6 +30,8 @@ class ExtensionInstance extends Instance
     }
 
     /**
+     * получить ответсвеннного юзера
+     *
      * @param null $target
      * @return User|null
      */
@@ -34,6 +41,8 @@ class ExtensionInstance extends Instance
     }
 
     /**
+     * получить задание
+     *
      * @return string
      */
     private function getTarget(): string
@@ -44,7 +53,9 @@ class ExtensionInstance extends Instance
     }
 
     /**
+     * установить интеграционные данны
      *
+     * @return void
      */
     protected function setIntegrationData(): void
     {

@@ -6,14 +6,31 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class LogSearch
+ * Модель, управляющая поиском ипо логу
+ *
+ * @property string $companySid
+ * @property string $eventSid
  * @package app\modules\api\models
  */
 class LogSearch extends Log
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
+
+    /**
+     * айди события
+     *
+     * @var string
+     */
     public string $eventSid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -23,6 +40,8 @@ class LogSearch extends Log
     }
 
     /**
+     * поиск по логу
+     *
      * @param $params
      * @return ActiveDataProvider
      */

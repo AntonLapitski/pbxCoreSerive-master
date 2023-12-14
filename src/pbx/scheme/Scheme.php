@@ -9,11 +9,24 @@ use app\src\pbx\scheme\model\Flow;
 
 /**
  * Class Scheme
+ * @property Flow $flow
+ * @property Pbx $pbx
  * @package app\src\pbx\scheme
  */
 class Scheme
 {
+    /**
+     * поток
+     *
+     * @var Flow
+     */
     public Flow $flow;
+
+    /**
+     * поток
+     *
+     * @var Pbx
+     */
     private Pbx $pbx;
 
     /**
@@ -28,6 +41,8 @@ class Scheme
     }
 
     /**
+     * установить поток
+     *
      * @param string $flowSid
      */
     public function setFlow(string $flowSid): void
@@ -37,6 +52,8 @@ class Scheme
     }
 
     /**
+     * вернуть класс билдер
+     *
      * @return array
      */
     public function build(): array|\app\src\pbx\scheme\model\Data

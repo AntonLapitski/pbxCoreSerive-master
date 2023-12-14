@@ -6,13 +6,24 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class VoicemailSearch
+ * Модель, поиска по голосовой почте
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class VoicemailSearch extends Voicemail
 {
+
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +33,8 @@ class VoicemailSearch extends Voicemail
     }
 
     /**
+     * поиск по юзеру через фильтры
+     *
      * @param $params
      * @return ActiveDataProvider
      */

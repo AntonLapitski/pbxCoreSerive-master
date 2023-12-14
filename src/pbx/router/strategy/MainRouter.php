@@ -16,6 +16,8 @@ use app\src\pbx\checkpoint\strategy\VoicemailCheckpoint;
 class MainRouter extends BaseRouter
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint

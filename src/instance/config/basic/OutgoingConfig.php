@@ -6,14 +6,30 @@ use app\src\instance\local_presents\LocalPresents;
 
 /**
  * Class OutgoingConfig
+ * Исходящий конфиг
+ * @property LocalPresents|string $local_presents
+ * @property string $phone
  * @package app\src\instance\config\basic
  */
 abstract class OutgoingConfig extends BasicConfig
 {
+    /**
+     * локальное содержимое
+     *
+     * @var LocalPresents|string
+     */
     protected LocalPresents|string $local_presents;
+
+    /**
+     * телефон
+     *
+     * @var string
+     */
     protected string $phone;
 
     /**
+     * установить интеграционные данные
+     *
      * @param array|null $data
      */
     public function setIntegrationData(array $data = null)
@@ -23,6 +39,8 @@ abstract class OutgoingConfig extends BasicConfig
     }
 
     /**
+     * студийный номер
+     *
      * @param array $config
      */
     protected function studioNumber(array $config = []): void
@@ -38,6 +56,8 @@ abstract class OutgoingConfig extends BasicConfig
     }
 
     /**
+     * установить сво-во
+     *
      * @param $fieldName
      * @param $sid
      */

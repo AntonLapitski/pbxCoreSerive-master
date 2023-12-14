@@ -13,6 +13,8 @@ use app\src\pbx\twiml\Twiml;
 class GatherBuilder extends BasicBuilder
 {
     /**
+     * поменять даные и сохранить
+     *
      * @return Data
      */
     public function build(): Data
@@ -30,6 +32,8 @@ class GatherBuilder extends BasicBuilder
 
 
     /**
+     * вернуть сообщение об ошибке
+     *
      * @return array
      */
     private function errorMessage()

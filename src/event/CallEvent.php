@@ -32,6 +32,8 @@ class CallEvent extends Event implements EventInterface
     const SERVICE_OUTGOING = 'outgoing';
 
     /**
+     * установить данные
+     *
      * @param array $settings
      */
     public function setData(array $settings): void
@@ -43,6 +45,8 @@ class CallEvent extends Event implements EventInterface
     }
 
     /**
+     * было ли завсиание в звонке
+     *
      * @return bool
      */
     private function isCallerHangup(): bool
@@ -51,6 +55,8 @@ class CallEvent extends Event implements EventInterface
     }
 
     /**
+     * статус завершенности звонка
+     *
      * @return bool
      */
     private function isCompletedCallStatus(): bool
@@ -59,6 +65,8 @@ class CallEvent extends Event implements EventInterface
     }
 
     /**
+     * задать маршруту шаг
+     *
      * @return bool
      */
     private function isRouteStep(): bool
@@ -67,6 +75,8 @@ class CallEvent extends Event implements EventInterface
     }
 
     /**
+     * поставить статусу шаг
+     *
      * @return bool
      */
     private function isStatusStep(): bool

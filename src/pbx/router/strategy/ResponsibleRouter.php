@@ -20,6 +20,8 @@ use app\src\pbx\router\Router;
 class ResponsibleRouter extends BaseRouter implements PbxRouterInterface
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint
@@ -52,6 +54,8 @@ class ResponsibleRouter extends BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * получить шаг
+     *
      * @param User $target
      * @return int
      */

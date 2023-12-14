@@ -13,12 +13,15 @@ use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * Class OutgoingConfig
+ * Исходящий конфиг
  * @package app\src\instance\config\callback
  */
 class OutgoingConfig extends \app\src\instance\config\basic\OutgoingConfig
 {
     #[ArrayShape([Config::FLOW => "array[]"])]
     /**
+     * вернуть конфиг с потоком
+     *
      * @param null $status
      * @return array
      */

@@ -18,10 +18,16 @@ use app\src\pbx\scheme\model\Flow;
 
 /**
  * Class Service
+ * @property InstanceInterface $instance
  * @package app\src\pbx\service
  */
 class Service
 {
+    /**
+     * образ
+     *
+     * @var InstanceInterface
+     */
     private InstanceInterface $instance;
 
     /**
@@ -34,6 +40,8 @@ class Service
     }
 
     /**
+     * вернуть тип проверочного пункта
+     *
      * @param Checkpoint $checkpoint
      * @param Flow $flow
      * @return string
@@ -63,6 +71,8 @@ class Service
     }
 
     /**
+     * является ли ответственным
+     *
      * @param Checkpoint $checkpoint
      * @param Flow $flow
      * @return bool
@@ -85,6 +95,8 @@ class Service
     }
 
     /**
+     * фильтр по ответственным
+     *
      * @return bool
      */
     public function isRespFilter(): bool

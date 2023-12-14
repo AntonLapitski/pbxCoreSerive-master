@@ -8,11 +8,26 @@ use JetBrains\PhpStorm\Pure;
 
 /**
  * Class LocalPresents
+ * класс локального представления
+ *
+ * @property ?array $config
+ * @property array $target
  * @package app\src\instance\local_presents
  */
 class LocalPresents
 {
+    /**
+     * конфиг
+     *
+     * @var ?array
+     */
     protected ?array $config;
+
+    /**
+     * задание
+     *
+     * @var array
+     */
     protected array $target;
 
     /**
@@ -29,6 +44,8 @@ class LocalPresents
     #[ArrayShape(['region_code' => "string", 'country_code' => "int|null"])]
 
     /**
+     * установить регональные настройки
+     *
      * @param $target
      * @return array
      */
@@ -47,6 +64,8 @@ class LocalPresents
     }
 
     /**
+     * забрать айди номер звонящего
+     *
      * @param null $pipeline
      * @return bool|null
      */
@@ -78,25 +97,28 @@ class LocalPresents
         return null;
     }
 
-    protected
-/**
- * @param $target_code
- * @param $country_code
- * @return bool
- */
-static function isValidCountry($target_code, $country_code): bool
-    {
-        return $target_code == $country_code;
-    }
+    /**
+     * является ли валидной страной
+     *
+     * @param $target_code
+     * @param $country_code
+     * @return bool
+     */
+    protected static function isValidCountry($target_code, $country_code): bool
+        {
+            return $target_code == $country_code;
+        }
 
-    protected
-/**
- * @param $target
- * @param $list
- * @return bool
- */
-static function isInRegionList($target, $list): bool
-    {
-        return !is_bool(array_search($target, $list));
+
+    /**
+     * является ли в списке регионов
+     *
+     * @param $target
+     * @param $list
+     * @return bool
+     */
+    protected static function isInRegionList($target, $list): bool
+        {
+            return !is_bool(array_search($target, $list));
+        }
     }
-}

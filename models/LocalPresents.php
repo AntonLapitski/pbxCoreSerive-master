@@ -3,19 +3,22 @@
 namespace app\models;
 
 /**
+ * Сlass LocalPresents
  * This is the element class for table "local_presents".
  *
  * @property int $id
  * @property int $company_id
  * @property string $sid
  * @property string $config
- *
  * @property Company $company
+ * @package app\models
  */
 class LocalPresents extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -23,7 +26,9 @@ class LocalPresents extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * правила валидации
+     *
+     * @return array
      */
     public function rules()
     {
@@ -36,7 +41,9 @@ class LocalPresents extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * названия полей формы
+     *
+     * @return array
      */
     public function attributeLabels()
     {
@@ -49,6 +56,8 @@ class LocalPresents extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

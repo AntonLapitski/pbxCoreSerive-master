@@ -6,16 +6,23 @@ use app\modules\api\models\VoicemailSearch;
 
 /**
  * Class VoicemailController
+ * Контроллер, управляющий голосовой перепиской
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class VoicemailController extends BaseController
 {
     /**
+     * название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\Voicemail';
 
     /**
+     * возможные действия
+     *
      * @return array
      */
     public function actions(): array
@@ -26,6 +33,8 @@ class VoicemailController extends BaseController
     }
 
     /**
+     * сделает поиск по модели
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

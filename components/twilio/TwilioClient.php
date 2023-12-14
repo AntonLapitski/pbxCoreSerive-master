@@ -6,21 +6,53 @@ use JetBrains\PhpStorm\ArrayShape;
 use Twilio\Jwt\ClientToken;
 use Twilio\Rest\Client;
 
-
 /**
  * Class TwilioClient
+ * Класс представлен для взаимодействия с твилио сервисом
+ *
+ * @property Client $client
+ * @property ClientToken $capability
+ * @property array $recordings
+ * @property array $dialCalls
  * @package app\components\twilio
  */
 class TwilioClient
 {
+    /**
+     * Объект переменная, используется для создания комплексного объекта, включающего компанию и прочие составные эл-ты
+     *
+     * @var Client
+     */
     protected Client $client;
+
+    /**
+     * Объект переменная, токен клиента
+     *
+     * @var ClientToken
+     */
     protected ClientToken $capability;
 
+    /**
+     * Массив записей
+     *
+     * @var array
+     */
     protected array $recordings = [];
+
+    /**
+     * набранные звонки
+     *
+     * @var array
+     */
     protected array $dialCalls = [];
 
     /**
-     * @throws \Twilio\Exceptions\ConfigurationException
+     * инициализация клиента
+     *
+     * @param $sid
+     * @param $token
+     * @return void
+     *
      */
     public function init($sid, $token)
     {
@@ -29,6 +61,8 @@ class TwilioClient
     }
 
     /**
+     * генерация токена исходя из возможностей
+     *
      * @param $identity
      * @param $appSid
      * @param int $expires
@@ -43,7 +77,11 @@ class TwilioClient
     }
 
     /**
+     * обновить статус
+     *
+     * @param $callSid
      * @throws \Twilio\Exceptions\TwilioException
+     * @return void
      */
     public function dropVoiceResource($callSid): void
     {
@@ -51,6 +89,8 @@ class TwilioClient
     }
 
     /**
+     * кому звонит клиент
+     *
      * @param $callSid
      * @return \Twilio\Rest\Api\V2010\Account\CallContext
      */
@@ -60,7 +100,11 @@ class TwilioClient
     }
 
     /**
-     * @throws \Twilio\Exceptions\TwilioException
+     * обновить голосовой ресурс
+     *
+     * @param $twiml
+     * @param $callSid
+     * @return string
      */
     public function updateVoiceResource($twiml, $callSid): string
     {
@@ -71,7 +115,13 @@ class TwilioClient
     }
 
     /**
+     * создать голосовой ресурс
+     *
+     * @param $to
+     * @param $from
+     * @param $settings
      * @throws \Twilio\Exceptions\TwilioException
+     * @return string
      */
     public function createVoiceResource($to, $from, $settings): string
     {
@@ -84,6 +134,8 @@ class TwilioClient
      */
     #[ArrayShape(['sid' => "string", 'status' => "string"])]
     /**
+     * создать ресурс сообщение
+     *
      * @param $to
      * @param $query
      * @return array
@@ -97,6 +149,8 @@ class TwilioClient
     }
 
     /**
+     * получить набранный звонок
+     *
      * @param $callSid
      * @return array
      */
@@ -115,6 +169,8 @@ class TwilioClient
     }
 
     /**
+     * получить набранные звонки
+     *
      * @param $callSid
      * @return \Twilio\Rest\Api\V2010\Account\CallInstance
      */
@@ -141,6 +197,8 @@ class TwilioClient
     }
 
     /**
+     * забрать записывающий урл
+     *
      * @param $callSid
      * @return string|null
      */
@@ -153,6 +211,8 @@ class TwilioClient
     }
 
     /**
+     * забрать записывание
+     *
      * @param $callSid
      * @return \Twilio\Rest\Api\V2010\Account\RecordingInstance
      */
@@ -180,6 +240,8 @@ class TwilioClient
     }
 
     /**
+     * отпарсить урл
+     *
      * @param $url
      * @return string|null
      */
@@ -193,6 +255,8 @@ class TwilioClient
     }
 
     /**
+     * получить записывающий интервал продолжительность
+     *
      * @param $callSid
      * @return int
      */
@@ -212,6 +276,8 @@ class TwilioClient
     }
 
     /**
+     * получить данные звонка
+     *
      * @param $callSid
      * @return array
      */
@@ -227,6 +293,8 @@ class TwilioClient
     }
 
     /**
+     * отпарсить полученное задание
+     *
      * @param $target
      * @return array
      */

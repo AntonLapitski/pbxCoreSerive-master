@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Log
+ * Модель лога
+ *
  * @package app\modules\api\models
  */
 class Log extends \app\models\Log implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Log extends \app\models\Log implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

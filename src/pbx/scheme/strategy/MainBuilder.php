@@ -13,6 +13,8 @@ use app\src\pbx\scheme\model\Data;
 class MainBuilder extends BasicBuilder
 {
     /**
+     * засетить данные потоком и сохранить
+     *
      * @return Data
      */
     public function build(): Data

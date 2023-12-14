@@ -4,15 +4,20 @@ namespace app\src\instance\config\src\blacklist;
 
 /**
  * Class Blacklist
+ * Класс черновой список
+ *
+ * @property array $list
  * @package app\src\instance\config\src\blacklist
  */
 class Blacklist
 {
-    /**
-     *
-     */
     const NUMBER = 'number';
 
+    /**
+     * список
+     *
+     * @var array
+     */
     private array $list;
 
     /**
@@ -25,6 +30,8 @@ class Blacklist
     }
 
     /**
+     * заблокирован ли
+     *
      * @param $number
      * @return bool
      */

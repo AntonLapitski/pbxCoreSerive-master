@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class TimetableSearch
+ * Модель, которая ищет по расписанию
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class TimetableSearch extends Timetable
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class TimetableSearch extends Timetable
     }
 
     /**
+     * поиск по расписанию
+     *
      * @param $params
      * @return ActiveDataProvider
      */

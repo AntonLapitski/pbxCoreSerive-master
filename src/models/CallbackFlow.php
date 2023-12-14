@@ -9,6 +9,8 @@ namespace app\src\models;
 class CallbackFlow extends \app\models\CallbackFlow
 {
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

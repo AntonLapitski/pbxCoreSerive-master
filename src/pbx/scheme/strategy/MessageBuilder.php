@@ -11,6 +11,8 @@ use app\src\pbx\scheme\model\Data;
 class MessageBuilder extends BasicBuilder
 {
     /**
+     * создать дата объект и получить его
+     *
      * @return Data
      */
     public function build(): Data

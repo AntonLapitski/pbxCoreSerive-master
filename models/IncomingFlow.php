@@ -3,6 +3,7 @@
 namespace app\models;
 
 /**
+ * Сlass IncomingFlow
  * This is the element class for table "incoming_flow".
  *
  * @property int $id
@@ -10,13 +11,15 @@ namespace app\models;
  * @property int $company_id
  * @property string $name
  * @property array $config
- *
  * @property Company $company
+ * @package app\models
  */
 class IncomingFlow extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -24,7 +27,9 @@ class IncomingFlow extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * правила валидации
+     *
+     * @return array
      */
     public function rules()
     {
@@ -37,7 +42,9 @@ class IncomingFlow extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * названия полей формы
+     *
+     * @return array
      */
     public function attributeLabels()
     {
@@ -56,6 +63,8 @@ class IncomingFlow extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

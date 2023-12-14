@@ -10,6 +10,8 @@ namespace app\src\models;
 class Voicemail extends \app\models\Voicemail
 {
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

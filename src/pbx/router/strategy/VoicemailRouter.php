@@ -15,6 +15,8 @@ use app\src\pbx\router\PbxRouterInterface;
 class VoicemailRouter extends BaseRouter implements PbxRouterInterface
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint

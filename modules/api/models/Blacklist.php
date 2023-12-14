@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Blacklist
+ * Модель, управляющая черновым листом
+ *
  * @package app\modules\api\models
  */
 class Blacklist extends \app\models\Blacklist implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Blacklist extends \app\models\Blacklist implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

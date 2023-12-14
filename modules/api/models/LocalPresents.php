@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class LocalPresents
+ * Модель локальных представлений
+ *
  * @package app\modules\api\models
  */
 class LocalPresents extends \app\models\LocalPresents implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class LocalPresents extends \app\models\LocalPresents implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

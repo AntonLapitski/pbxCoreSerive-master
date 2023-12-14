@@ -5,16 +5,25 @@ namespace app\src\client;
 
 use app\src\models\User;
 use app\src\models\Model;
-
 /**
- * @property User[] $list;
+ * Class UserList
+ * Класс список юзера
  *
- */
+ * @property array $list
+ * @package app\src\client
+ **/
 class UserList extends Model
 {
+    /**
+     * список
+     *
+     * @var array
+     */
     public array $list;
 
     /**
+     * получить ссылающуюся сущность
+     *
      * @param $target
      * @return bool
      */
@@ -35,35 +44,37 @@ class UserList extends Model
             ];
     }
 
-    public
-/**
- * @param $target
- * @return User
- */
-function get($target): User
-    {
-        if (strlen($target) < 5)
-            return $this->find(['sip' => $target]);
-        if (is_numeric(str_replace('+', '', $target)))
-            return $this->find(['mobile_number' => $target]);
+    /**
+     * найти юзера
+     *
+     * @param $target
+     * @return User
+     */
+    public function get($target): User
+        {
+            if (strlen($target) < 5)
+                return $this->find(['sip' => $target]);
+            if (is_numeric(str_replace('+', '', $target)))
+                return $this->find(['mobile_number' => $target]);
 
-        return $this->find(['sid' => $target]);
+            return $this->find(['sid' => $target]);
+        }
+
+    /**
+     *
+     *
+     * @param $condition
+     * @return User
+     */
+    private function find($condition): User
+        {
+            $property = key($condition);
+            $userList = array_column($this->list, $property);
+            $id = array_search($condition[$property], $userList);
+            if (false !== $id)
+                return $this->list[$id];
+
+            return new User();
+        }
+
     }
-
-    private
-/**
- * @param $condition
- * @return User
- */
-function find($condition): User
-    {
-        $property = key($condition);
-        $userList = array_column($this->list, $property);
-        $id = array_search($condition[$property], $userList);
-        if (false !== $id)
-            return $this->list[$id];
-
-        return new User();
-    }
-
-}

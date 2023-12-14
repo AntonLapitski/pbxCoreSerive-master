@@ -4,6 +4,8 @@ namespace app\src\event\request\strategy;
 
 /**
  * Class CallbackRequest
+ * Запрошенный коллбэк
+ *
  * @package app\src\event\request\strategy
  */
 class CallbackRequest extends CallRequest implements RequestInterface

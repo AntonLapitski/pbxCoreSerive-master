@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class User
+ * Модель пользователя
+ *
  * @package app\modules\api\models
  */
 class User extends \app\models\User implements Linkable
 {
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class User extends \app\models\User implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

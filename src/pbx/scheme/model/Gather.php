@@ -10,12 +10,11 @@ use app\src\pbx\checkpoint\Checkpoint;
  */
 class Gather extends Flow
 {
-    /**
-     *
-     */
     const VERB = 'gather';
 
     /**
+     * установен ли следующий
+     *
      * @return bool
      */
     public function isIssetNext(): bool
@@ -25,6 +24,8 @@ class Gather extends Flow
     }
 
     /**
+     * текущий поток
+     *
      * @return array
      */
     public function current(): array

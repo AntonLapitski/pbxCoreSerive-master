@@ -15,6 +15,8 @@ use app\src\pbx\scheme\model\Data;
 class CallbackBuilder extends BasicBuilder
 {
     /**
+     * засетить и сохранить метод
+     *
      * @return Data
      */
     public function build(): Data
@@ -24,6 +26,8 @@ class CallbackBuilder extends BasicBuilder
     }
 
     /**
+     * засетить объект дата
+     *
      * @return Data
      */
     private function callback(): Data
@@ -48,6 +52,8 @@ class CallbackBuilder extends BasicBuilder
     }
 
     /**
+     * засетить исходящий объект дата
+     *
      * @return Data
      */
     private function outgoing(): Data
@@ -64,6 +70,8 @@ class CallbackBuilder extends BasicBuilder
     }
 
     /**
+     * получить список
+     *
      * @param array $list
      * @return array
      */
@@ -81,6 +89,8 @@ class CallbackBuilder extends BasicBuilder
     }
 
     /**
+     * выбрать устройство
+     *
      * @param User $user
      * @return string
      */
@@ -95,6 +105,8 @@ class CallbackBuilder extends BasicBuilder
     }
 
     /**
+     * выбрать необходимые параметры в логическое значение
+     *
      * @param User $user
      * @return string
      */

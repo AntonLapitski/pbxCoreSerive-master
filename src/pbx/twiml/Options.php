@@ -6,15 +6,22 @@ namespace app\src\pbx\twiml;
 
 /**
  * Class Options
+ * @property mixed $data
+ * @property array $element
  * @package app\src\pbx\twiml
  */
 class Options
 {
     /**
-     * @var
+     * дата
+     *
+     * @var mixed $data
      */
     public $data;
+
     /**
+     * элемент
+     *
      * @var array
      */
     protected $element;
@@ -30,6 +37,8 @@ class Options
     }
 
     /**
+     * поучить элементы опций
+     *
      * @return array
      */
     public function getElemOptions()
@@ -39,6 +48,8 @@ class Options
     }
 
     /**
+     * поиск опций
+     *
      * @return array
      */
     protected function searchOptions()
@@ -58,6 +69,8 @@ class Options
     }
 
     /**
+     * существует ли
+     *
      * @param $property
      * @param $dataElem
      * @return bool
@@ -73,6 +86,8 @@ class Options
     }
 
     /**
+     * установить элемент
+     *
      * @param $element
      * @return $this
      */

@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class CallbackFlowSearch
+ * Модель, управляющая черновым листом
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class CallbackFlowSearch extends CallbackFlow
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class CallbackFlowSearch extends CallbackFlow
     }
 
     /**
+     * поиск по CallbackFlow
+     *
      * @param $params
      * @return ActiveDataProvider
      */

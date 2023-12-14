@@ -13,6 +13,8 @@ use app\src\pbx\scheme\model\Data;
 class OutgoingBuilder extends BasicBuilder
 {
     /**
+     * засетить дата и сохранить
+     *
      * @return Data
      */
     public function build(): Data

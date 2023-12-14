@@ -7,16 +7,23 @@ use app\modules\api\models\CompanySearch;
 
 /**
  * Class BlacklistController
+ * Контроллер, который управляет черновым списком
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class BlacklistController extends BaseController
 {
     /**
+     * Название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\Blacklist';
 
     /**
+     * возможные методы
+     *
      * @return array
      */
     public function actions(): array
@@ -27,6 +34,8 @@ class BlacklistController extends BaseController
     }
 
     /**
+     * поиск по черновому списку
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

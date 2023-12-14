@@ -7,16 +7,23 @@ use app\modules\api\models\UserSearch;
 
 /**
  * Class UserController
+ * Контроллер, управляющий юзером
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class UserController extends BaseController
 {
     /**
+     * название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\User';
 
     /**
+     * возможные действия
+     *
      * @return array
      */
     public function actions(): array
@@ -27,6 +34,8 @@ class UserController extends BaseController
     }
 
     /**
+     * сделает поиск по модели
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

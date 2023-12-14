@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Timetable
+ * Модель, управляющая расписанием
+ *
  * @package app\modules\api\models
  */
 class Timetable extends \app\models\Timetable implements Linkable
 {
     /**
+     * доп-е поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Timetable extends \app\models\Timetable implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

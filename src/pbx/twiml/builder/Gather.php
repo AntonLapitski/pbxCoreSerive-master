@@ -12,16 +12,13 @@ use app\src\pbx\twiml\Twiml;
  */
 class Gather extends TwimlMapper
 {
-    /**
-     *
-     */
     const VERB = 'gather';
-    /**
-     *
-     */
+
     const NOTICE = 'notice';
 
     /**
+     * установить записи т вернуть ответ
+     *
      * @return \Twilio\TwiML\VoiceResponse
      */
     public function build(): \Twilio\TwiML\VoiceResponse
@@ -35,6 +32,8 @@ class Gather extends TwimlMapper
     }
 
     /**
+     * установить записи
+     *
      * @param \Twilio\TwiML\Voice\Gather $gather
      */
     protected function setNotice(\Twilio\TwiML\Voice\Gather $gather): void

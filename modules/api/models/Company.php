@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Company
+ * Модель компания
+ *
  * @package app\modules\api\models
  */
 class Company extends \app\models\Company implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -23,6 +27,8 @@ class Company extends \app\models\Company implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

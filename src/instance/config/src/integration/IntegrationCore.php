@@ -12,16 +12,40 @@ use crmpbx\logger\Logger;
 
 /**
  * Class Integration
- * @package app\src\instance\integration
+ * @package app\src\instance\integration $model
+ * @package array $data
+ * @package Logger $logger
+ * @package ommutator $commutator
  * @property \app\src\models\twilio\Integration $element
  */
 class IntegrationCore
 {
+    /**
+     * модель
+     *
+     * @var \app\src\models\twilio\Integration
+     */
     public \app\src\models\twilio\Integration $model;
 
+    /**
+     * данные
+     *
+     * @var ?array
+     */
     public ?array $data;
 
+    /**
+     * логгер
+     *
+     * @var Logger
+     */
     private Logger $logger;
+
+    /**
+     * соединитель
+     *
+     * @var Commutator
+     */
     private Commutator $commutator;
 
     /**
@@ -39,6 +63,8 @@ class IntegrationCore
     }
 
     /**
+     * отправляет запрос с помощью соединителя на урл
+     *
      * @param $data
      * @param $route
      * @return Response|null
@@ -67,7 +93,10 @@ class IntegrationCore
     }
 
     /**
-     * @param array $
+     * сделать логи
+     *
+     * @param array|CommutatorException $response
+     * @return void
      */
     private function log(array|CommutatorException $response)
     {

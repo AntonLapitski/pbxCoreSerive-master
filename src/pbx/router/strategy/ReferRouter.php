@@ -18,6 +18,8 @@ use app\src\pbx\router\Router;
 class ReferRouter extends BaseRouter implements PbxRouterInterface
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint
@@ -57,6 +59,8 @@ class ReferRouter extends BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * вернуть задание
+     *
      * @return User
      */
     private function target(): User
@@ -68,6 +72,8 @@ class ReferRouter extends BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * получить шаг
+     *
      * @param User $target
      * @return string
      */
@@ -91,6 +97,8 @@ class ReferRouter extends BaseRouter implements PbxRouterInterface
     }
 
     /**
+     * перевести модель в массив
+     *
      * @param string $targetSid
      * @return array
      */

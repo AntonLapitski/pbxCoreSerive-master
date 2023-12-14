@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class IncomingFlow
+ * Модель входящий поток
+ *
  * @package app\modules\api\models
  */
 class IncomingFlow extends \app\models\IncomingFlow  implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class IncomingFlow extends \app\models\IncomingFlow  implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

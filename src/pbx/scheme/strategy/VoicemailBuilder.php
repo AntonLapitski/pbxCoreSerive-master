@@ -15,6 +15,9 @@ use app\src\pbx\twiml\Twiml;
 class VoicemailBuilder extends BasicBuilder
 {
     /**
+     * засетить дата и сохранить
+     *
+     *
      * @return Data
      */
     public function build(): Data
@@ -30,6 +33,8 @@ class VoicemailBuilder extends BasicBuilder
     }
 
     /**
+     * вернуть поток логосовой почты
+     *
      * @param $target
      * @return bool
      */

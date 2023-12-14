@@ -10,13 +10,42 @@ use app\src\instance\log\Log;
 
 /**
  * Class ConfigSettings
+ * Класс Конфиг Настройки
+ *
+ * @property EventInterface $event
+ * @property TwilioSettings $twilio
+ * @property Log $log
+ * @property string $timezone
  * @package app\src\instance\config\src
  */
 class ConfigSettings
 {
+    /**
+     * событие
+     *
+     * @var EventInterface $event
+     */
     public EventInterface $event;
+
+    /**
+     * твилио
+     *
+     * @var TwilioSettings $twilio
+     */
     public TwilioSettings $twilio;
+
+    /**
+     * логгер
+     *
+     * @var Log $log
+     */
     public Log $log;
+
+    /**
+     * таймзона
+     *
+     * @var string $timezone
+     */
     public string $timezone;
 
     /**

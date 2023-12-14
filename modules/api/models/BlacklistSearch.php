@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class BlacklistSearch
+ * Модель, управляющая черновым листом
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class BlacklistSearch extends Blacklist
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class BlacklistSearch extends Blacklist
     }
 
     /**
+     * поиск по черновому листу
+     *
      * @param $params
      * @return ActiveDataProvider
      */

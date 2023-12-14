@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Config
+ * Модель, управляющая классом конфигурации
+ *
  * @package app\modules\api\models
  */
 class Config extends \app\models\Config implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Config extends \app\models\Config implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

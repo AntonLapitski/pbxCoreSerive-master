@@ -9,16 +9,23 @@ use app\src\instance\config\src\timetable\Timetable;
 
 /**
  * Class CallIncomingConfig
+ * @property array $incomingFlow
  * @package app\src\instance\config
- * @property Timetable $timetable
- * @property array $blacklist
  */
 class IncomingConfig extends \app\src\instance\config\basic\IncomingConfig implements ConfigInterface
 {
+    /**
+     * входящий поток
+     *
+     * @var array
+     */
     protected array $incomingFlow;
 
     /**
+     * вернуть поток
+     *
      * @throws ContentNotFound
+     * @return array
      */
     public function flow($status = null, string $flowSid = ''): array
     {

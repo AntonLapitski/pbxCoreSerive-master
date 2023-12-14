@@ -10,12 +10,32 @@ use app\src\pbx\scheme\model\Settings;
 
 /**
  * Class BasicElement
+ * @property string $verb
+ * @property Instance $instance
+ * @property Settings $settings
  * @package app\src\pbx\scheme\element
  */
 abstract class BasicElement extends Model
 {
+    /**
+     * глагол
+     *
+     * @var string
+     */
     public string $verb;
+
+    /**
+     * образ
+     *
+     * @var Instance
+     */
     protected Instance $instance;
+
+    /**
+     * настройки
+     *
+     * @var Settings
+     */
     protected Settings $settings;
 
     /**
@@ -32,6 +52,8 @@ abstract class BasicElement extends Model
     }
 
     /**
+     * вернуть как массив
+     *
      * @return array
      */
     public function build(): array

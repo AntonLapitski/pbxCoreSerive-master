@@ -16,6 +16,8 @@ use app\src\pbx\twiml\Twiml;
 abstract class DirectBuilder extends BasicBuilder
 {
     /**
+     * схема
+     *
      * @param User $user
      * @return array
      */

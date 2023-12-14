@@ -7,13 +7,21 @@ use app\src\event\EventInterface;
 
 /**
  * Class Config
+ * @property array $event
  * @package app\src
  */
 class Config extends Model
 {
+    /**
+     * событие
+     *
+     * @var array
+     */
     public array $event;
 
     /**
+     * засетить событие и вернуть его
+     *
      * @param EventInterface $event
      * @return EventInterface
      */

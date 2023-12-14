@@ -8,14 +8,31 @@ use yii\db\Query;
 
 /**
  * Class CompanySearch
+ * Модель, поиска по компаниям
+ *
+ * @property string $twilioSid
+ * @property string $userSid
  * @package app\modules\api\models
  */
 class CompanySearch extends Company
 {
+    /**
+     * айди твилио
+     *
+     * @var string
+     */
     public string $twilioSid;
+
+    /**
+     * айди юзера
+     *
+     * @var string
+     */
     public string $userSid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -25,6 +42,8 @@ class CompanySearch extends Company
     }
 
     /**
+     * поиск по компаниям через фильтры
+     *
      * @param $params
      * @return ActiveDataProvider
      */

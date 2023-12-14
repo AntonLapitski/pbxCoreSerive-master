@@ -7,11 +7,15 @@ use yii\helpers\Json;
 
 /**
  * Class MessageController
+ * Контроллер управляющий сообщениями
+ *
  * @package app\controllers
  */
 class MessageController extends AppController
 {
     /**
+     * отправка данных нофтификации пост методом
+     *
      * @return string
      */
     public function actionGet(): string
@@ -22,6 +26,8 @@ class MessageController extends AppController
     }
 
     /**
+     * создание сообщения ресурса
+     *
      * @return string
      */
     public function actionSend(): string
@@ -37,6 +43,9 @@ class MessageController extends AppController
     }
 
     /**
+     *
+     * Вывести статус
+     *
      * @return string
      */
     public function actionStatus(): string

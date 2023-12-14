@@ -17,6 +17,8 @@ use app\src\pbx\router\Router;
 class InternalRouter extends BaseRouter
 {
     /**
+     * засетить проверочный пункт
+     *
      * @return Checkpoint
      */
     public function exec(): Checkpoint
@@ -37,6 +39,8 @@ class InternalRouter extends BaseRouter
     }
 
     /**
+     * получить шаг
+     *
      * @param User $user
      * @return string
      */

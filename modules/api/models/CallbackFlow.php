@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class CallbackFlow
+ * Модель колбекка на поток
+ *
  * @package app\modules\api\models
  */
 class CallbackFlow extends \app\models\CallbackFlow implements Linkable
 {
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class CallbackFlow extends \app\models\CallbackFlow implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

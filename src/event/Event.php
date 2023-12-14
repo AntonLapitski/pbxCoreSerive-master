@@ -7,124 +7,100 @@ use app\src\event\request\strategy\RequestInterface;
 use app\src\event\status\Tracker;
 
 /**
+ * CLass Event
+ *
  * @property string $event
  * @property string $step
  * @property string $route
  * @property Tracker $status
  * @property RequestInterface $request
+ * @package app\src\event
  */
 abstract class Event implements EventInterface
 {
-    /**
-     *
-     */
     const EVENT = 'event';
-    /**
-     *
-     */
+
     const STATUS = 'status';
 
-    /**
-     *
-     */
     const DIRECTION_OUTGOING = 'outgoing';
-    /**
-     *
-     */
+
     const DIRECTION_INTERNAL = 'internal';
-    /**
-     *
-     */
+
     const DIRECTION_INCOMING = 'incoming';
 
-    /**
-     *
-     */
     const SERVICE_CALL = 'call';
-    /**
-     *
-     */
+
     const SERVICE_MESSAGE = 'message';
-    /**
-     *
-     */
+
     const SERVICE_CALLBACK = 'callback';
-    /**
-     *
-     */
+
     const SERVICE_EXTENSION = 'extension';
 
-    /**
-     *
-     */
     const STEP_INIT = 'init';
-    /**
-     *
-     */
+
     const STEP_ROUTE = 'route';
-    /**
-     *
-     */
+
     const STEP_STATUS = 'status';
-    /**
-     *
-     */
+
     const STEP_DIAL_STATUS = 'dial-status';
-    /**
-     *
-     */
+
     const STEP_CALLBACK = 'callback';
-    /**
-     *
-     */
+
     const STEP_MESSAGE_GET = 'get';
-    /**
-     *
-     */
+
     const STEP_MESSAGE_SEND = 'send';
 
-    /**
-     *
-     */
     const STATUS_HANGUP = 'hangup';
-    /**
-     *
-     */
+
     const STATUS_COMPLETED = 'completed';
-    /**
-     *
-     */
+
     const STATUS_NO_ANSWER = 'no-answer';
-    /**
-     *
-     */
+
     const STATUS_BUSY = 'busy';
-    /**
-     *
-     */
+
     const STATUS_RINGING = 'ringing';
-    /**
-     *
-     */
+
     const STATUS_VOICEMAIL = 'voicemail';
-    /**
-     *
-     */
+
     const STATUS_IN_PROGRESS = 'in-progress';
-    /**
-     *
-     */
+
     const STATUS_GATHER_HANDLED = 'handled';
-    /**
-     *
-     */
+
     const STATUS_TIMEOUT = 'timeout';
 
+    /**
+     * событие
+     *
+     * @var string
+     */
     public string $event;
+
+    /**
+     * шаг
+     *
+     * @var string
+     */
     public string $step;
+
+    /**
+     * роут
+     *
+     * @var string
+     */
     public string $route;
 
+    /**
+     * треккер
+     *
+     * @var Tracker
+     */
     public Tracker $status;
+
+    /**
+     * запрос интерфейс
+     *
+     * @var RequestInterface
+     */
     public RequestInterface $request;
 
     /**
@@ -142,6 +118,8 @@ abstract class Event implements EventInterface
     }
 
     /**
+     * сетинг данными
+     *
      * @param array $settings
      */
     public function setData(array $settings): void

@@ -7,11 +7,15 @@ use yii\web\Linkable;
 
 /**
  * Class Twilio
+ * Модель, твилио
+ *
  * @package app\modules\api\models
  */
 class Twilio extends \app\models\Twilio implements Linkable
 {
     /**
+     * дополнительные поля
+     *
      * @return array
      */
     public function extraFields(): array
@@ -22,6 +26,8 @@ class Twilio extends \app\models\Twilio implements Linkable
     }
 
     /**
+     * забрать ссылки
+     *
      * @return array
      */
     public function getLinks()

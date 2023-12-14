@@ -13,14 +13,25 @@ use JetBrains\PhpStorm\ArrayShape;
 
 /**
  * Class OutgoingConfig
+ * Исходящий конфиг
+ *
+ * @property string $messageService
  * @package app\src\instance\config\message
  */
 class OutgoingConfig extends \app\src\instance\config\basic\OutgoingConfig implements ConfigInterface
 {
+
+    /**
+     * сервис сообщений
+     *
+     * @var string
+     */
     public string $messageService;
 
     #[ArrayShape([Config::FLOW => "array[]"])]
     /**
+     * вернуть конфиг
+     *
      * @param null $status
      * @return array
      */
@@ -32,6 +43,8 @@ class OutgoingConfig extends \app\src\instance\config\basic\OutgoingConfig imple
     }
 
     /**
+     * установить свой-во
+     *
      * @param $fieldName
      * @param $sid
      */
@@ -44,6 +57,8 @@ class OutgoingConfig extends \app\src\instance\config\basic\OutgoingConfig imple
     }
 
     /**
+     * забрать интеграцию
+     *
      * @param $sid
      * @return Integration
      */
@@ -56,6 +71,8 @@ class OutgoingConfig extends \app\src\instance\config\basic\OutgoingConfig imple
     }
 
     /**
+     * забрать айди интеграции
+     *
      * @param $sid
      * @return mixed
      */

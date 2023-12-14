@@ -7,6 +7,13 @@ namespace app\src\instance\config;
 use app\src\event\EventInterface;
 use app\src\instance\config\src\ConfigSettings;
 
+/**
+ * Class Config
+ * Класс Конфиг Настройки
+ *
+ * @property \Closure $fabric
+ * @package app\src\instance\config\src
+ */
 class Config
 {
     const FLOW = 'flow';
@@ -17,6 +24,11 @@ class Config
 
     private \Closure $fabric;
 
+    /**
+     * Config constructor.
+     * @param EventInterface $event
+     * @param ConfigSettings $settings
+     */
     public function __construct(EventInterface $event, ConfigSettings $settings)
     {
         $this->fabric = function (\app\src\models\Config $model) use ($event, $settings) {
@@ -24,6 +36,14 @@ class Config
         };
     }
 
+    /**
+     * создание объекта через конструктор
+     *
+     * @param \app\src\models\Config $model
+     * @param EventInterface $event
+     * @param ConfigSettings $settings
+     * @return ConfigInterface
+     */
     protected function fabricConfig(\app\src\models\Config $model, EventInterface $event, ConfigSettings $settings): ConfigInterface
     {
         $config = sprintf('app\src\instance\config\%s\%sConfig', $event->event, ucfirst($event->request->Direction));
@@ -32,6 +52,12 @@ class Config
             return (new $config($model, $settings))->get($event->request->To);
     }
 
+    /**
+     * выбор логики, которая будет отвечать кодом
+     *
+     * @param \app\src\models\Config $model
+     * @return ConfigInterface
+     */
     public function get(\app\src\models\Config $model): ConfigInterface
     {
         return call_user_func($this->fabric, $model ?? new \app\src\models\Config());

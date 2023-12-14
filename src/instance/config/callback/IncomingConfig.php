@@ -7,13 +7,23 @@ use app\exceptions\FlowSchemeNotFound;
 
 /**
  * Class IncomingConfig
+ * Входящий конфиг
+ * @property array $callbackFlow
  * @package app\src\instance\config\callback
  */
 class IncomingConfig extends \app\src\instance\config\basic\IncomingConfig
 {
+
+    /**
+     * возвратный поток
+     *
+     * @var array
+     */
     protected array $callbackFlow;
 
     /**
+     * вернуть поток
+     *
      * @param null $status
      * @return array
      */

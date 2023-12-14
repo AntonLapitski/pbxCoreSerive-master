@@ -3,9 +3,8 @@
 namespace app\models;
 
 /**
+ * Сlass Company
  * This is the element class for table "company".
- *
- * @method
  *
  * @property int $id
  * @property string $sid
@@ -17,11 +16,14 @@ namespace app\models;
  * @property Log[] $logs
  * @property Twilio $twilio
  * @property User[] $users
+ * @package app\models
  */
 class Company extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -29,7 +31,9 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * правила валидации
+     *
+     * @return array
      */
     public function rules()
     {
@@ -39,7 +43,9 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * названия полей формы
+     *
+     * @return array
      */
     public function attributeLabels()
     {
@@ -52,6 +58,8 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить из бд поток звонка
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCallFlow(): \yii\db\ActiveQuery
@@ -60,6 +68,8 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить логи звонка
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCallLogs(): \yii\db\ActiveQuery
@@ -68,6 +78,8 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить твилио данные
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getTwilio(): \yii\db\ActiveQuery
@@ -76,6 +88,8 @@ class Company extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить юзеров
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getUsers(): \yii\db\ActiveQuery

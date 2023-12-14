@@ -7,16 +7,23 @@ use app\modules\api\models\CompanySearch;
 
 /**
  * Class CallbackFlowController
+ * Контроллер, который управлят потоками на вызовы
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class CallbackFlowController extends BaseController
 {
     /**
+     * название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\CallbackFlow';
 
     /**
+     * возможные действия
+     *
      * @return array
      */
     public function actions(): array
@@ -27,6 +34,8 @@ class CallbackFlowController extends BaseController
     }
 
     /**
+     * сделает поиск по модели
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

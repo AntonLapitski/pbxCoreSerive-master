@@ -6,16 +6,23 @@ use app\modules\api\models\TwilioSearch;
 
 /**
  * Class TwilioController
+ * Контроллер, управляющий твилио
+ *
+ * @property string $modelClass
  * @package app\modules\api\controllers
  */
 class TwilioController extends BaseController
 {
     /**
+     * название модели
+     *
      * @var string
      */
     public $modelClass = 'app\modules\api\models\Twilio';
 
     /**
+     * возможные действия
+     *
      * @return array
      */
     public function actions(): array
@@ -26,6 +33,8 @@ class TwilioController extends BaseController
     }
 
     /**
+     * сделает поиск по модели
+     *
      * @return \yii\data\ActiveDataProvider
      */
     public function prepareDataProvider(): \yii\data\ActiveDataProvider

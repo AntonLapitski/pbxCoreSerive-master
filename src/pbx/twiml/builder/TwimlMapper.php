@@ -8,16 +8,48 @@ use Twilio\TwiML\VoiceResponse;
 
 /**
  * Class TwimlMapper
+ * @property VoiceResponse $response
+ * @property  array $schema
+ * @property  array $flow
+ * @property  mixed $checkpoint
+ * @property  array $element
  * @package app\src\pbx\twiml\builder
  */
 class TwimlMapper
 {
+    /**
+     * голосовой ответ
+     *
+     * @var VoiceResponse
+     */
     protected VoiceResponse $response;
 
+    /**
+     * схема
+     *
+     * @var array
+     */
     protected array $schema;
+
+    /**
+     * поток
+     *
+     * @var array
+     */
     protected array $flow;
+
+    /**
+     * проверочный пункт
+     *
+     * @var mixed
+     */
     protected mixed $checkpoint;
 
+    /**
+     * элемент
+     *
+     * @var array
+     */
     protected array $element;
 
     /**
@@ -36,6 +68,8 @@ class TwimlMapper
     }
 
     /**
+     * поток
+     *
      * @param $schema
      * @return array
      */
@@ -51,6 +85,8 @@ class TwimlMapper
     }
 
     /**
+     * установить проверочный пункт и вернуть ответ
+     *
      * @return VoiceResponse
      */
     public function build(): \Twilio\TwiML\VoiceResponse
@@ -67,7 +103,9 @@ class TwimlMapper
     }
 
     /**
+     * установить перевалочный пункт
      *
+     * @return void
      */
     protected function setCheckpoint()
     {
@@ -78,6 +116,8 @@ class TwimlMapper
     }
 
     /**
+     * создать класс из неймспейса
+     *
      * @return mixed
      */
     protected function next()

@@ -16,26 +16,74 @@ use app\src\instance\log\Log;
 use crmpbx\logger\Logger;
 
 /**
+ * Class InstanceBuilder
+ * Билдер для объекта класса
+ *
  * @property EventInterface $event
  * @property Client $client
  * @property Log $log
  * @property Data $data
  * @property User $responsibleUser
  * @property ConfigInterface $config
- *
+ * @property Logger $logger
+ * @package app\src\instance
  */
 trait InstanceBuilder
 {
+
+    /**
+     * событие
+     *
+     * @var EventInterface
+     */
     public EventInterface $event;
+
+    /**
+     * клиент
+     *
+     * @var Client
+     */
     public Client $client;
+
+    /**
+     * лог
+     *
+     * @var Log
+     */
     public Log $log;
+
+    /**
+     * конфигурационный интерфейс
+     *
+     * @var ConfigInterface
+     */
     public ConfigInterface $config;
+
+    /**
+     * дата объект
+     *
+     * @var Data
+     */
     public Data $data;
+
+    /**
+     * юзер
+     *
+     * @var User
+     */
     public ?User $responsibleUser;
 
+    /**
+     * логгер
+     *
+     * @var Logger
+     */
     private Logger $logger;
 
     /**
+     * Class InstanceBuilder constructor
+     * @param EventInterface $event
+     * @param Client $client
      * @throws \Twilio\Exceptions\ConfigurationException
      * @throws ConfigException
      */
@@ -57,6 +105,8 @@ trait InstanceBuilder
     }
 
     /**
+     * получить ответсвенного юзера
+     *
      * @param null $target
      * @return User|null
      */
@@ -72,6 +122,8 @@ trait InstanceBuilder
     }
 
     /**
+     * получить конфиг
+     *
      * @param \app\src\models\Config|null $model
      * @return ConfigInterface
      * @throws ConfigException
@@ -93,7 +145,9 @@ trait InstanceBuilder
     }
 
     /**
+     * установить интеграционные данные
      *
+     * @return void
      */
     protected function setIntegrationData(): void
     {

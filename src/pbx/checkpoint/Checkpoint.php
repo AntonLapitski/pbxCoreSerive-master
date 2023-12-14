@@ -14,36 +14,36 @@ use JetBrains\PhpStorm\Pure;
 
 /**
  * Class Checkpoint
+ * @property BasicCheckpoint $model
+ * @property \Closure $callback
  * @package app\src\pbx\checkpoint
  */
 class Checkpoint
 {
-    /**
-     *
-     */
     const BRANCH = 'branch';
-    /**
-     *
-     */
+
     const STEP = 'step';
-    /**
-     *
-     */
+
     const TARGET = 'target';
-    /**
-     *
-     */
+
     const TYPE = 'type';
 
-    /**
-     *
-     */
     const FROM = 'from';
-    /**
-     *
-     */
+
     const TO = 'to';
+
+    /**
+     * модель
+     *
+     * @var BasicCheckpoint
+     */
     public BasicCheckpoint $model;
+
+    /**
+     * замыкание
+     *
+     * @var \Closure
+     */
     private \Closure $callback;
 
     /**
@@ -60,6 +60,8 @@ class Checkpoint
     }
 
     /**
+     * создать объект образ
+     *
      * @param InstanceInterface $instance
      * @return Checkpoint
      */
@@ -75,6 +77,8 @@ class Checkpoint
     #[Pure]
 
     /**
+     * получить дефолтный проверочный
+     *
      * @param InstanceInterface $instance
      * @return array
      */
@@ -99,6 +103,8 @@ class Checkpoint
     }
 
     /**
+     * получить модель
+     *
      * @param $type
      * @param array $config
      * @return Checkpoint
@@ -110,6 +116,8 @@ class Checkpoint
     }
 
     /**
+     * получить задание
+     *
      * @param array $checkpoint
      * @return string|null
      */
@@ -125,6 +133,8 @@ class Checkpoint
     }
 
     /**
+     * проинкрементировать шаг
+     *
      * @return Checkpoint
      */
     public function setNextStep(): self
@@ -134,6 +144,8 @@ class Checkpoint
     }
 
     /**
+     * засетить новый шаг для собрания
+     *
      * @return Checkpoint
      */
     public function setNextStepForGatherHandler(): self

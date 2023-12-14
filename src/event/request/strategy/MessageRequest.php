@@ -6,15 +6,58 @@ use app\src\event\Event;
 
 /**
  * Class MessageRequest
+ * Запрос сообщения
+ *
+ * @property string $MessageSid
+ * @property string $Body
+ * @property string $SmsStatus
+ * @property string $MessageStatus
+ * @property array $Media
+ * @property string $IntegrationSid
  * @package app\src\event\request\strategy
  */
 class MessageRequest extends TwilioRequest implements RequestInterface
 {
+    /**
+     * айди сообщения
+     *
+     * @var string
+     */
     public string $MessageSid;
+
+    /**
+     * тело сообщения
+     *
+     * @var string
+     */
     public string $Body;
+
+    /**
+     * смсстатус
+     *
+     * @var string
+     */
     public string $SmsStatus;
+
+    /**
+     * статус сообщения
+     *
+     * @var string
+     */
     public string $MessageStatus;
+
+    /**
+     * медиа контент
+     *
+     * @var string
+     */
     public array $Media;
+
+    /**
+     * афди интеграции
+     *
+     * @var string
+     */
     public string $IntegrationSid;
 
     /**
@@ -51,6 +94,8 @@ class MessageRequest extends TwilioRequest implements RequestInterface
     }
 
     /**
+     * установить направление звонка
+     *
      * @return string
      */
     protected function setDirection(): string

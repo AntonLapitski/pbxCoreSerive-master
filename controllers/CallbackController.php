@@ -9,11 +9,15 @@ use yii\helpers\Json;
 
 /**
  * Class CallbackController
+ * Класс представлен для основоного коллбэков после отработки определенной логики
+ *
  * @package app\controllers
  */
 class CallbackController extends AppController
 {
     /**
+     * получить спиок вызываемыхы у модели ивентов
+     *
      * @return mixed
      */
     public function actionInit()
@@ -37,7 +41,9 @@ class CallbackController extends AppController
     }
 
     /**
+     * обновить голосовой ресурс
      *
+     * @return void
      */
     public function actionRoute()
     {
@@ -58,7 +64,9 @@ class CallbackController extends AppController
     }
 
     /**
+     * вывести в лог статус
      *
+     * @return void
      */
     public function actionParentStatus()
     {
@@ -68,7 +76,9 @@ class CallbackController extends AppController
     }
 
     /**
+     * удалить голосовой ресурс
      *
+     * @return void
      */
     public function actionChildStatus()
     {

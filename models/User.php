@@ -3,6 +3,7 @@
 namespace app\models;
 
 /**
+ * Сlass User
  * This is the element class for table "user".
  *
  * @property int $id
@@ -13,14 +14,16 @@ namespace app\models;
  * @property string $mobile_number
  * @property string $auth_token
  * @property string $outgoing_config_sid
- *
  * @property array $settings
  * @property Company $company
  * @property Config $config
+ * @package app\models
  */
 class User extends \yii\db\ActiveRecord
 {
     /**
+     * поулчить название таблицы
+     *
      * @return string
      */
     public static function tableName()
@@ -29,6 +32,8 @@ class User extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery
@@ -37,6 +42,8 @@ class User extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить конфиг
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getConfig(): \yii\db\ActiveQuery

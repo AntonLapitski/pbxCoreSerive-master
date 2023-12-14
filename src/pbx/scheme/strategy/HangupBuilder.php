@@ -15,6 +15,8 @@ use app\src\pbx\twiml\Twiml;
 class HangupBuilder extends BasicBuilder
 {
     /**
+     * установить данные и сохранить
+     *
      * @return Data
      */
     public function build(): Data

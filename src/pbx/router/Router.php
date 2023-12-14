@@ -13,29 +13,19 @@ use app\src\pbx\Pbx;
  */
 class Router
 {
-    /**
-     *
-     */
     const STEP = 'step';
-    /**
-     *
-     */
+
     const END_STATUS = 'end';
-    /**
-     *
-     */
+
     const VOICEMAIL_STATUS = 'voicemail';
-    /**
-     *
-     */
+
     const NEXT_FLOW = 'next_flow';
 
-    /**
-     *
-     */
     const GATHER_HANDLER = 'gather';
 
     /**
+     * выполнить логику обработчика роутера
+     *
      * @param Pbx $pbx
      */
     public static function exec(Pbx $pbx): void
@@ -44,6 +34,8 @@ class Router
     }
 
     /**
+     * получить обработчик роутера
+     *
      * @param Pbx $pbx
      * @return mixed
      */

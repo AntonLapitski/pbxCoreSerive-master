@@ -6,20 +6,68 @@ namespace app\src\instance\config\src\timetable;
 
 /**
  * Class Timetable
+ * Класс расписание
+ *
+ * @property string $status
+ * @property string $weekday
+ * @property int $hour
+ * @property int $minute
+ * @property int $month
+ * @property int $dayOfMonth
+ * @property string $timeZone
  * @package app\src\instance\config\src\timetable
  */
 class Timetable
 {
-    /**
-     *
-     */
     const OFFTIME = 'offtime';
+
+    /**
+     * статус
+     *
+     * @var string
+     */
     public string $status;
+
+    /**
+     * день недели
+     *
+     * @var string
+     */
     protected string $weekday;
+
+    /**
+     * час
+     *
+     * @var string
+     */
     protected int $hour;
+
+    /**
+     * минуты
+     *
+     * @var string
+     */
     protected int $minute;
+
+    /**
+     * месяц
+     *
+     * @var string
+     */
     protected int $month;
+
+    /**
+     * день месяца
+     *
+     * @var string
+     */
     protected int $dayOfMonth;
+
+    /**
+     * таймзона
+     *
+     * @var string
+     */
     private string $timeZone;
 
     /**
@@ -33,7 +81,10 @@ class Timetable
     }
 
     /**
+     * установить дату
+     *
      * @throws \Exception
+     * @return void
      */
     private function setCurrentDate()
     {
@@ -50,6 +101,8 @@ class Timetable
     }
 
     /**
+     * получить для текущего расписания
+     *
      * @param \app\src\models\Timetable $schedule
      * @param $defaultTimezone
      * @return Timetable
@@ -62,7 +115,10 @@ class Timetable
     }
 
     /**
+     * со статусом текущего расписния
+     *
      * @param $schedule
+     * @return void
      */
     protected function withStatusForCurrentSchedule($schedule): void
     {
@@ -73,6 +129,8 @@ class Timetable
     }
 
     /**
+     * является ли время в текущем расписании
+     *
      * @param $timeTable
      * @return bool
      */
@@ -89,6 +147,8 @@ class Timetable
     }
 
     /**
+     * является ли время в текущем интервале
+     *
      * @param $timeInterval
      * @return bool
      */
@@ -99,6 +159,8 @@ class Timetable
     }
 
     /**
+     * является ли после него
+     *
      * @param $from
      * @return bool
      */
@@ -112,6 +174,8 @@ class Timetable
     }
 
     /**
+     * перед тем
+     *
      * @param $to
      * @return bool
      */

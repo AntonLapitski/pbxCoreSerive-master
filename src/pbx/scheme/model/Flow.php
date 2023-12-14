@@ -9,31 +9,53 @@ use app\src\pbx\checkpoint\Checkpoint;
 use app\src\pbx\twiml\Twiml;
 
 /**
+ * Class Flow
  * @property Settings $settings
  * @property Voicemail $voicemail
  * @property array $flow
+ * @package app\src\pbx\scheme\model
  */
 class Flow extends Model
 {
-    /**
-     *
-     */
     const GATHER_HANDLER = 'handler';
-    /**
-     *
-     */
+
     const SETTINGS = 'settings';
-    /**
-     *
-     */
+
     const FLOW = 'flow';
 
+    /**
+     * настройки
+     *
+     * @var Settings
+     */
     public Settings $settings;
+
+    /**
+     * голосовая почта
+     *
+     * @var Voicemail
+     */
     public Voicemail $voicemail;
 
+    /**
+     * проверочный пункт
+     *
+     * @var Checkpoint
+     */
     public Checkpoint $checkpoint;
+
+    /**
+     * собран
+     *
+     * @var Gather
+     */
     public Gather $gather;
 
+    /**
+     * поток
+     *
+     * @var array
+     */
     public array $flow;
 
     /**
@@ -48,6 +70,8 @@ class Flow extends Model
     }
 
     /**
+     * текущий шаг
+     *
      * @return array
      */
     public function current(): array
@@ -56,6 +80,8 @@ class Flow extends Model
     }
 
     /**
+     * следующий ли шаг установлен
+     *
      * @return bool
      */
     public function isIssetNext(): bool
@@ -65,6 +91,8 @@ class Flow extends Model
     }
 
     /**
+     * собран ли
+     *
      * @param $input
      * @return Flow
      */
@@ -96,6 +124,8 @@ class Flow extends Model
     }
 
     /**
+     * получить конфиг
+     *
      * @param $data
      * @return array
      */

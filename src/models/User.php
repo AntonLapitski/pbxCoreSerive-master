@@ -5,14 +5,26 @@ namespace app\src\models;
 
 use app\src\models\twilio\UserSettings;
 /**
+ * Class User
+ * Модель полдьзователь
+ *
  * @property UserSettings $settings
+ * @property string $number
+ * @package app\src\models\twilio\UserSettings
  */
 class User extends \app\models\User
 {
+    /**
+     * номер
+     *
+     * @return void
+     */
     public string $number;
 
     /**
+     * поменяем сеттинги и номер и сохраним
      *
+     * @return void
      */
     public function afterFind()
     {
@@ -22,6 +34,8 @@ class User extends \app\models\User
     }
 
     /**
+     * найти компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery
@@ -30,6 +44,8 @@ class User extends \app\models\User
     }
 
     /**
+     * получить конфиг
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getConfig(): \yii\db\ActiveQuery

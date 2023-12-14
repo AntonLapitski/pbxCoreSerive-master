@@ -8,11 +8,14 @@ use crmpbx\httpClient\Response;
 
 /**
  * Class Integration
+ * Класс интеграция
  * @package app\src\instance\config\src\integration
  */
 class Integration extends IntegrationCore
 {
     /**
+     * является ли новым контактом
+     *
      * @return bool
      */
     public function isNewContact(): bool
@@ -21,6 +24,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * получить имя контакта
+     *
      * @return bool
      */
     public function getContactName()
@@ -29,6 +34,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * получить айди ответсвтенного юзера
+     *
      * @return |null
      */
     public function getResponsibleUserSid()
@@ -37,6 +44,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * получить ответсвенного юзера
+     *
      * @return |null
      */
     public function getResponsibleUser()
@@ -45,6 +54,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * получить данные
+     *
      * @return array|null
      */
     public function get(): ?array
@@ -53,6 +64,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * забрать данные
+     *
      * @param $data
      * @param $route
      * @return array|null
@@ -68,6 +81,8 @@ class Integration extends IntegrationCore
     }
 
     /**
+     * отправить данные
+     *
      * @param $data
      * @param $route
      * @return bool

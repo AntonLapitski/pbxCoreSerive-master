@@ -6,13 +6,23 @@ use yii\data\ActiveDataProvider;
 
 /**
  * Class TwilioSearch
+ * Модель, управляющая поиском по твилио
+ *
+ * @property string $companySid
  * @package app\modules\api\models
  */
 class TwilioSearch extends Twilio
 {
+    /**
+     * айди компании
+     *
+     * @var string
+     */
     public string $companySid;
 
     /**
+     * правила валидации
+     *
      * @return array
      */
     public function rules() {
@@ -22,6 +32,8 @@ class TwilioSearch extends Twilio
     }
 
     /**
+     * поиск по твилио модели
+     *
      * @param $params
      * @return ActiveDataProvider
      */

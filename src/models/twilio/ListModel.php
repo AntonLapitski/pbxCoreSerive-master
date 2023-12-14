@@ -9,13 +9,23 @@ use app\src\models\Model;
 
 /**
  * Class ListModel
+ * Модель список
+ *
+ * @property array $list
  * @package app\src\models\twilio
  */
 abstract class ListModel extends Model
 {
+    /**
+     * список
+     *
+     * @var array
+     */
     public array $list;
 
     /**
+     * получить
+     *
      * @throws ContentNotFound
      */
     public function get(string $prop, string $value)

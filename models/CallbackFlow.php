@@ -3,6 +3,7 @@
 namespace app\models;
 
 /**
+ * Сlass CallbackFlow
  * This is the element class for table "callback_flow".
  *
  * @property int $id
@@ -10,13 +11,15 @@ namespace app\models;
  * @property string $sid
  * @property string $name
  * @property string $config
- *
  * @property Company $company
+ * @package app\models
  */
 class CallbackFlow extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -24,7 +27,9 @@ class CallbackFlow extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * правила валидации
+     *
+     * @return array
      */
     public function rules()
     {
@@ -39,7 +44,9 @@ class CallbackFlow extends \yii\db\ActiveRecord
     }
 
     /**
-     * {@inheritdoc}
+     * названия полей формы
+     *
+     * @return array
      */
     public function attributeLabels()
     {
@@ -53,6 +60,8 @@ class CallbackFlow extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить команию по айди из бд
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

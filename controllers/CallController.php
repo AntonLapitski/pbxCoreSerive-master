@@ -8,11 +8,15 @@ use Yii;
 
 /**
  * Class CallController
+ * Контроллер для обрабтки звонков
+ *
  * @package app\controllers
  */
 class CallController extends AppController
 {
     /**
+     * поулчить сво-во twiml
+     *
      * @return mixed
      */
     public function actionInit()
@@ -29,7 +33,9 @@ class CallController extends AppController
     }
 
     /**
+     * вывести в лог
      *
+     * @return void
      */
     public function actionRoute()
     {
@@ -50,6 +56,9 @@ class CallController extends AppController
 
     /**
      *
+     * Вывести статус
+     *
+     * @return void
      */
     public function actionStatus()
     {
@@ -62,6 +71,9 @@ class CallController extends AppController
 
     /**
      *
+     * Статус набраннных звонков
+     *
+     * @return void
      */
     public function actionDialStatus()
     {

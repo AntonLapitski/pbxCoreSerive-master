@@ -4,6 +4,7 @@ namespace app\models;
 
 
 /**
+ * Сlass Twilio
  * This is the element class for table "twilio".
  *
  * @property int $id
@@ -13,11 +14,14 @@ namespace app\models;
  * @property string $domain
  * @property array $settings
  * @property Company $company
+ * @package app\models
  */
 class Twilio extends \yii\db\ActiveRecord
 {
     /**
-     * {@inheritdoc}
+     * поулчить название таблицы
+     *
+     * @return string
      */
     public static function tableName()
     {
@@ -25,6 +29,8 @@ class Twilio extends \yii\db\ActiveRecord
     }
 
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

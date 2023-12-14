@@ -17,6 +17,8 @@ use app\src\pbx\checkpoint\Checkpoint;
 class CallInstance extends Instance
 {
     /**
+     * получить конфиг
+     *
      * @param \app\src\models\Config|null $model
      * @return ConfigInterface
      * @throws config\ConfigException
@@ -37,6 +39,9 @@ class CallInstance extends Instance
     }
 
     /**
+     *
+     * получить источник звонка
+     *
      * @param string $phone
      * @return string
      */
@@ -46,6 +51,8 @@ class CallInstance extends Instance
     }
 
     /**
+     * получить ответственного юзера
+     *
      * @param null $target
      * @return User|null
      */
@@ -73,7 +80,9 @@ class CallInstance extends Instance
     }
 
     /**
+     * установить интеграционные данные
      *
+     * @return void
      */
     protected function setIntegrationData(): void
     {

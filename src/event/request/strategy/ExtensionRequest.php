@@ -9,11 +9,15 @@ use libphonenumber\PhoneNumberUtil;
 
 /**
  * Class ExtensionRequest
+ * Запрос по расширениям
+ *
  * @package app\src\event\request\strategy
  */
 class ExtensionRequest extends CallRequest implements RequestInterface
 {
     /**
+     * отпарсить номер телеофона
+     *
      * @param $phone
      * @param $region
      * @return string
@@ -34,6 +38,8 @@ class ExtensionRequest extends CallRequest implements RequestInterface
     }
 
     /**
+     * установить направление звонка
+     *
      * @return string
      */
     protected function setDirection(): string

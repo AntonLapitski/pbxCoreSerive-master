@@ -9,6 +9,8 @@ namespace app\src\models;
 class Config extends \app\models\Config
 {
     /**
+     * получить компанию
+     *
      * @return \yii\db\ActiveQuery
      */
     public function getCompany(): \yii\db\ActiveQuery

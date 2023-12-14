@@ -9,22 +9,58 @@ use yii\web\ForbiddenHttpException;
 
 
 /**
+ * Class Client
+ * Класс клиента
+ *
  * @property int $id
  * @property string $name
  * @property Company $company
  * @property UserList $userList
  * @property Twilio $twilio
+ * @package app\src\client
  **/
 class Client
 {
+    /**
+     * айди клиента
+     *
+     * @var int
+     */
     public int $id;
+
+    /**
+     * компания
+     *
+     * @var int
+     */
     public Company $company;
+
+    /**
+     * имя клиента
+     *
+     * @var int
+     */
     public string $name;
+
+    /**
+     * список юзеров
+     *
+     * @var int
+     */
     public UserList $userList;
+
+    /**
+     * объект твилио
+     *
+     * @var int
+     */
     public Twilio $twilio;
 
 
     /**
+     * Class Client constructor
+     *
+     * @param RequestInterface $request
      * @throws ForbiddenHttpException
      */
     public function __construct(RequestInterface $request)
@@ -37,7 +73,10 @@ class Client
     }
 
     /**
+     * получить компанию
+     *
      * @throws ForbiddenHttpException
+     * @return string
      */
     private static function getCompany(RequestInterface $request): ?Company
     {

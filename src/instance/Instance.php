@@ -18,6 +18,8 @@ abstract class Instance implements InstanceInterface
     use InstanceBuilder;
 
     /**
+     * получить имя звонящего
+     *
      * @param null $name
      * @return string|null
      */
@@ -60,6 +62,8 @@ abstract class Instance implements InstanceInterface
     }
 
     /**
+     * в черновом ли списке
+     *
      * @return bool
      */
     public function isInBlackList(): bool
@@ -71,6 +75,8 @@ abstract class Instance implements InstanceInterface
     }
 
     /**
+     * получить ссылку на задание
+     *
      * @return User
      */
     public function getReferTarget(): User
@@ -80,6 +86,8 @@ abstract class Instance implements InstanceInterface
     }
 
     /**
+     * получить источник из твилио
+     *
      * @return mixed
      */
     protected function getCallInitSourceFromTwilio()
